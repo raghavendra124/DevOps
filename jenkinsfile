@@ -1,0 +1,12 @@
+pipeline {
+   agent any
+   tools {
+       jdk 'jdk1.8'
+       maven 'maven3'
+   }
+   stages{
+       stage('pull git'){
+           steps{
+         git 'https://gitlab.com/raghavendra124/DevOps.git'
+    }
+       }
